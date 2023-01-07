@@ -58,7 +58,7 @@ export class CarService {
 
 ### 3. Write unit tests (Test-driven-development)
 
-First test your domain model and business service, using MockedDbRepository implementation.
+Here lies the greatest benefit of using IDomainRepository. You can easily test your services using MockedDbRepository implementation. **No more difficult mocking of db methods!**
 
 ```typescript
 import { MockedDBRepository } from 'domain-repository';
@@ -86,6 +86,8 @@ describe('CarService', () => {
   });
 });
 ```
+
+Your testers will no longer have to know the technical details of your db implementation. The unit testing has never been easier.
 
 ---
 
