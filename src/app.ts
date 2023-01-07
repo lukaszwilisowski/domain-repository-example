@@ -1,4 +1,5 @@
-import { MongoDbRepository, PostgreSQLDbRepository } from 'domain-repository';
+import { MongoDbRepository } from 'domain-repository/db/mongodb';
+import { PostgreSQLDbRepository } from 'domain-repository/db/postgresql';
 import mongoose from 'mongoose';
 import { DataSource } from 'typeorm';
 import { ICarMongoEntity } from './db/mongoose/car.entity';
