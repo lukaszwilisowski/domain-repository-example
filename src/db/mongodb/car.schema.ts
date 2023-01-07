@@ -1,4 +1,5 @@
-import { Mapping, mapToMongoObjectId } from 'domain-repository';
+import { mapToMongoObjectId } from 'domain-repository/db/mongodb';
+import { Mapping } from 'domain-repository/mapping';
 import { Schema } from 'mongoose';
 import { ICarAttached } from '../../domain/models/car.model';
 import { ICarMongoEntity } from './car.entity';

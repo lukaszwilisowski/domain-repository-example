@@ -1,6 +1,7 @@
-import { Mapping, mapToSqlIntId } from 'domain-repository';
+import { mapToSqlIntId } from 'domain-repository/db/postgresql';
+import { Mapping } from 'domain-repository/mapping';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { ICarAttached } from '../../../domain/models/car.model';
+import { ICarAttached } from '../../domain/models/car.model';
 import { ICarSqlEntity } from './car.entity';
 
 //if you do not put ! next to the properties, TS will scream that properties are not initialized

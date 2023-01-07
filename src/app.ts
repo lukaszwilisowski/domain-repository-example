@@ -2,10 +2,10 @@ import { MongoDbRepository } from 'domain-repository/db/mongodb';
 import { PostgreSQLDbRepository } from 'domain-repository/db/postgresql';
 import mongoose from 'mongoose';
 import { DataSource } from 'typeorm';
-import { ICarMongoEntity } from './db/mongoose/car.entity';
-import { CarSchema, mongoCarMapping } from './db/mongoose/car.schema';
-import { ICarSqlEntity } from './db/typeorm/car.entity';
-import { SqlCarEntity, sqlCarMapping } from './db/typeorm/car.schema';
+import { ICarMongoEntity } from './db/mongodb/car.entity';
+import { CarSchema, mongoCarMapping } from './db/mongodb/car.schema';
+import { ICarSqlEntity } from './db/postgresql/car.entity';
+import { SqlCarEntity, sqlCarMapping } from './db/postgresql/car.schema';
 import { ICar, ICarAttached } from './domain/models/car.model';
 import { CarService } from './domain/services/car.service';
 
@@ -38,7 +38,7 @@ const runPostgresTest = async (): Promise<void> => {
     type: 'postgres',
     host: 'localhost',
     port: 5432,
-    database: 'testdb',
+    database: 'mydb',
     username: 'postgres',
     password: 'admin',
     synchronize: true, //for local testing
