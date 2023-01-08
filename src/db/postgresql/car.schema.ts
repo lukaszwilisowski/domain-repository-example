@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { ICarAttached } from '../../domain/models/car.model';
 import { ICarSqlEntity } from './car.entity';
 
-//if you do not put ! next to the properties, TS will scream that properties are not initialized
+//you can put ! next to the properties, to prevent Typescript no-initializer warnings
 @Entity('cars')
 export class SqlCarEntity implements ICarSqlEntity {
   @PrimaryGeneratedColumn()
