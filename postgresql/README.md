@@ -1,6 +1,6 @@
 # IDomainRepository - PostgreSQL example
 
-## Installation with Mongoose
+## Installation with TypeORM
 
 #1. First uninstall TypeORM.
 
