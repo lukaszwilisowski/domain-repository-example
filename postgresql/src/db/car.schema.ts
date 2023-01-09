@@ -1,7 +1,7 @@
 import { mapToSqlIntId } from 'domain-repository/db/postgresql';
 import { Mapping } from 'domain-repository/mapping';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { ICarAttached } from '../../domain/models/car.model';
+import { ICarAttached } from '../domain/models/car.model';
 import { ICarSqlEntity } from './car.entity';
 
 //you can put ! next to the properties, to prevent Typescript no-initializer warnings

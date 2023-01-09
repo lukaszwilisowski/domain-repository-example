@@ -16,7 +16,6 @@
   "dependencies": {
     "domain-repository": "^1.1.11",
     "mongodb": "^3.7.3",
-    "mongoose": "^6.8.2",
-    "typeorm": "^0.3.11"
+    "mongoose": "^6.8.2"
   }
 }

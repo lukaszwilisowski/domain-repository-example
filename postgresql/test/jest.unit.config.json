@@ -1,0 +1,15 @@
+{
+  "preset": "ts-jest",
+  "testRegex": "\\.tests.ts$",
+  "testEnvironment": "node",
+  "transform": {
+    "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+  },
+  "transformIgnorePatterns": ["<rootDir>/../node_modules/(?!variables/.*)"],
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "<rootDir>/tsconfig.test.json"
+    }
+  },
+  "moduleDirectories": ["<rootDir>/../node_modules", "<rootDir>/../src"]
+}
