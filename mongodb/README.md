@@ -1,6 +1,26 @@
 # # IDomainRepository - MongoDb example
 
-## How to use domain-repository
+## Installation with Mongoose
+
+#1. First uninstall Mongoose and MongoDb.
+
+```bash
+npm uninstall mongoose mongodb @types/mongoose @types/mongodb
+```
+
+#2. Install latest Mongoose.
+
+```bash
+npm install mongoose
+```
+
+#3. Only AFTER you have latest Mongoose installed, install domain-repository.
+
+```bash
+npm install domain-repository
+```
+
+## How to use it?
 
 ### 1. Define your domain models
 

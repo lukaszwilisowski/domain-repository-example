@@ -1,6 +1,26 @@
 # IDomainRepository - PostgreSQL example
 
-## How to use domain-repository
+## Installation with Mongoose
+
+#1. First uninstall TypeORM.
+
+```bash
+npm uninstall typeorm @types/typeorm
+```
+
+#2. Install latest TypeORM.
+
+```bash
+npm install typeorm
+```
+
+#3. Install domain-repository.
+
+```bash
+npm install domain-repository
+```
+
+## How to use it?
 
 ### 1. Define your domain models
 
