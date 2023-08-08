@@ -7,7 +7,7 @@ import { CarService } from './domain/services/car.service';
 
 const runMongoTest = async (): Promise<void> => {
   await new Promise<void>((resolve) => {
-    mongoose.connect('mongodb://localhost:27017/testdb', {});
+    mongoose.connect('mongodb://127.0.0.1:27017/testdb');
     mongoose.connection.on('open', () => resolve());
   });
 

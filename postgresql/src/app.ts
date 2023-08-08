@@ -8,7 +8,7 @@ import { CarService } from './domain/services/car.service';
 const runPostgresTest = async (): Promise<void> => {
   const dataSource = new DataSource({
     type: 'postgres',
-    host: 'localhost',
+    host: '127.0.0.1',
     port: 5432,
     database: 'mydb',
     username: 'postgres',
