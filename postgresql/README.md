@@ -143,8 +143,8 @@ export type ICarSqlEntity = {
 Now create file `car.entity.ts` and define your db entity, using TypeORM:
 
 ```typescript
+import { Mapping } from 'strict-type-mapper';
 import { mapToSqlIntId } from 'domain-repository/db/postgresql';
-import { Mapping } from 'domain-repository/mapping';
 
 //you can put ! next to the properties, to prevent Typescript no-initializer warnings
 @Entity('cars')

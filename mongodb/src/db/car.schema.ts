@@ -1,8 +1,8 @@
 import { mapToMongoObjectId } from 'domain-repository/db/mongodb';
-import { Mapping } from 'domain-repository/mapping';
 import { Schema } from 'mongoose';
-import { ICarMongoEntity } from './car.entity';
+import { Mapping } from 'strict-type-mapper';
 import { ICarAttached } from '../domain/models/car.model';
+import { ICarMongoEntity } from './car.entity';
 
 export const CarSchema = new Schema<ICarMongoEntity>({
   name: {

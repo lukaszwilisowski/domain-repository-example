@@ -1,5 +1,5 @@
 import { mapToSqlIntId } from 'domain-repository/db/postgresql';
-import { Mapping } from 'domain-repository/mapping';
+import { Mapping } from 'strict-type-mapper';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { ICarAttached } from '../domain/models/car.model';
 import { ICarSqlEntity } from './car.entity';

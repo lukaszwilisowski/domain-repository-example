@@ -143,7 +143,7 @@ export type ICarMongoEntity = {
 Now create file `car.schema.ts` and define your db schema, using mongoose:
 
 ```typescript
-import { Mapping } from 'domain-repository/mapping';
+import { Mapping } from 'strict-type-mapper';
 import { mapToMongoObjectId } from 'domain-repository/db/mongodb';
 
 //standard MongoDb schema, typed with your db model
