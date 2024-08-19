@@ -4,6 +4,7 @@ import { ICarSqlEntity } from './db/car.entity';
 import { SqlCarEntity, sqlCarMapping } from './db/car.schema';
 import { ICar, ICarAttached } from './domain/models/car.model';
 import { CarService } from './domain/services/car.service';
+import { IDomainRepository } from 'domain-repository';
 
 const runPostgresTest = async (): Promise<void> => {
   const dataSource = new DataSource({
@@ -19,7 +20,7 @@ const runPostgresTest = async (): Promise<void> => {
 
   await dataSource.initialize();
 
-  const carRepository = new PostgreSQLDbRepository<ICar, ICarAttached, ICarSqlEntity>(
+  const carRepository: IDomainRepository<ICar, ICarAttached> = new PostgreSQLDbRepository<ICar, ICarAttached, ICarSqlEntity>(
     dataSource.getRepository(SqlCarEntity),
     sqlCarMapping
   );

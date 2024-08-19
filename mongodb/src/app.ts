@@ -4,6 +4,7 @@ import { ICarMongoEntity } from './db/car.entity';
 import { CarSchema, mongoCarMapping } from './db/car.schema';
 import { ICar, ICarAttached } from './domain/models/car.model';
 import { CarService } from './domain/services/car.service';
+import { IDomainRepository } from 'domain-repository';
 
 const runMongoTest = async (): Promise<void> => {
   await new Promise<void>((resolve) => {
@@ -11,7 +12,7 @@ const runMongoTest = async (): Promise<void> => {
     mongoose.connection.on('open', () => resolve());
   });
 
-  const carRepository = new MongoDbRepository<ICar, ICarAttached, ICarMongoEntity>(
+  const carRepository: IDomainRepository<ICar, ICarAttached> = new MongoDbRepository<ICar, ICarAttached, ICarMongoEntity>(
     mongoose.model<ICarMongoEntity>('cars', CarSchema),
     mongoCarMapping
   );
